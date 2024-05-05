@@ -1,3 +1,4 @@
+cp /etc/secrets/.env .
 cat .env
 echo "Running composer"
 composer global require hirak/prestissimo
