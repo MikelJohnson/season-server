@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('seasons', function (Blueprint $table) {
+        Schema::create('season_images', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string('season');
-            $table->text('description');
+            $table->text('image');
+            $table->string('mime_type');
+            $table->string('filename');
         });
     }
 
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('seasons');
+        Schema::dropIfExists('season_images');
     }
 };
